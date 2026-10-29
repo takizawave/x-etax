@@ -1,0 +1,26 @@
+/* Source: user-provided computed styles of e-tax.nta.go.jp/hojin.html at 878px.
+   Scope keeps this stylesheet inert when the extension is switched off. */
+:where(html.x-etax-enabled, html.x-etax-settings) {
+  --etax-green: #006600;
+  --etax-ink: #333333;
+  --etax-strong: #000000;
+  --etax-muted: #666666;
+  --etax-white: #ffffff;
+  --etax-line: #dddddd;
+  --etax-line-subtle: #e2eae5;
+  --etax-font: "メイリオ", Meiryo, Osaka, "MS Pゴシック", "ヒラギノ角ゴ Pro W3", sans-serif;
+  --etax-leading: 1.75;
+  --etax-display: 48px;
+  --etax-heading: 24px;
+  --etax-card-title: 18px;
+  --etax-body: 16px;
+  --etax-small: 14px;
+  --etax-space-xs: 12px;
+  --etax-space-md: 24px;
+  --etax-space-lg: 26px;
+  --etax-space-xl: 32px;
+  --etax-gutter: 34px;
+  --etax-page-x: 64px;
+  --etax-radius: 4px;
+  --etax-hairline: .5px;
+}

@@ -1,0 +1,95 @@
+/* Shared component contracts. Apply to semantic X surfaces, including portal layers. */
+html.x-etax-enabled { --etax-surface: #fff; --etax-page: #fff; --etax-soft: #f3f7f3; --etax-link: var(--etax-green); --etax-button-bg: var(--etax-green); --etax-button-ink: #fff; --etax-field: #fff; --etax-frame: 1px solid var(--etax-line); --etax-shadow: none; }
+html.x-etax-enabled body { background: var(--etax-page) !important; }
+.x-etax-enabled :is(#x-etax-theme-banner, .x-etax-masthead) { background: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="primaryColumn"], header[role="banner"], [data-testid="tweet"], [role="tablist"], .r-kemksi, .r-5zmot, .r-14lw9ot, .r-yfoy6g) { background-color: var(--etax-surface) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([style*="background-color: rgb(0, 0, 0)"], [style*="background-color: rgb(21, 32, 43)"], [style*="background-color: rgb(255, 255, 255)"]) { background-color: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is(button, [role="button"]) { border-radius: var(--etax-radius) !important; font-family: var(--etax-font) !important; background: var(--etax-surface) !important; color: var(--etax-ink) !important; border: var(--etax-frame) !important; box-shadow: var(--etax-shadow) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is(button, [role="button"]):is([aria-disabled="true"], :disabled) { opacity: .45 !important; cursor: not-allowed !important; }
+.x-etax-enabled :is(:is(#react-root, #layers), #layers) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), textarea, select) { color: var(--etax-ink) !important; background: var(--etax-field) !important; border-radius: var(--etax-radius) !important; font: var(--etax-body)/var(--etax-leading) var(--etax-font) !important; accent-color: var(--etax-green); }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid^="tweetTextarea_"], [data-testid="dmComposerTextInput"])[contenteditable="true"]:not(:has([contenteditable="true"])) { padding: 12px !important; color: var(--etax-ink) !important; background: var(--etax-field) !important; border: 1px solid var(--etax-line) !important; border-radius: var(--etax-radius) !important; min-height: 72px; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid^="tweetTextarea_"], [data-testid="dmComposerTextInput"])[contenteditable="true"]:not(:has([contenteditable="true"])):focus-within { outline: 2px solid var(--etax-green); outline-offset: 2px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="toolBar"] { border-top: 1px solid var(--etax-line); padding-top: 12px; color: var(--etax-green) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="SideNav_NewTweet_Button"], [data-testid="tweetButtonInline"], [data-testid="tweetButton"], [data-testid="dmComposerSendButton"], [data-testid="confirmationSheetConfirm"]) { background: var(--etax-button-bg) !important; color: var(--etax-button-ink) !important; border: var(--etax-frame) !important; box-shadow: var(--etax-shadow) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="SideNav_NewTweet_Button"], [data-testid="tweetButtonInline"], [data-testid="tweetButton"], [data-testid="dmComposerSendButton"], [data-testid="confirmationSheetConfirm"]) :is(span, div, svg) { color: var(--etax-button-ink) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid$="-follow"], [data-testid$="-unfollow"], [data-testid="editProfileButton"]) { background: var(--etax-surface) !important; color: var(--etax-green) !important; border: 1px solid var(--etax-green) !important; padding: 8px 16px !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid$="-follow"], [data-testid$="-unfollow"], [data-testid="editProfileButton"]) :is(span, div) { color: inherit !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="quoteTweet"], [data-testid="card.wrapper"]) { border: var(--etax-frame) !important; border-radius: var(--etax-radius) !important; background: var(--etax-soft) !important; overflow: hidden; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="quoteTweet"] { padding: 16px !important; margin-block: 16px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] [role="group"] { padding-top: 12px; gap: 8px; border-top: 1px solid var(--etax-line-subtle); }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] [role="group"] :is(button, [role="button"]):hover { background: var(--etax-soft) !important; color: var(--etax-green) !important; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweetText"] a { color: var(--etax-link) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="UserCell"], [data-testid="notification"], [data-testid="conversation"]) { padding: 20px !important; border-bottom: 1px solid var(--etax-line) !important; background: var(--etax-surface) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="UserName"], [data-testid="UserDescription"], [data-testid="UserProfileHeader_Items"]) { color: var(--etax-ink) !important; font-size: var(--etax-body) !important; line-height: var(--etax-leading) !important; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="UserName"] { border-left: 5px solid var(--etax-green) !important; padding-left: 12px !important; margin-block: 16px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="UserDescription"] { padding-block: 16px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="messageEntry"] { border: var(--etax-frame) !important; border-radius: var(--etax-radius) !important; padding: 12px 16px !important; background: var(--etax-soft) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="messageEntry"] :is(div, span) { color: inherit !important; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="conversation"][aria-selected="true"] { border-left: 5px solid var(--etax-green) !important; background: var(--etax-soft) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="emptyState"], [data-testid="error-detail"]) { margin: 24px; padding: 32px; border: 1px solid var(--etax-line); border-radius: var(--etax-radius); background: var(--etax-soft); color: var(--etax-ink); }
+.x-etax-enabled :is([role="dialog"], [role="menu"], [data-testid="Dropdown"]) { background: var(--etax-surface) !important; color: var(--etax-ink) !important; border: var(--etax-frame) !important; border-radius: var(--etax-radius) !important; box-shadow: var(--etax-shadow) !important; font: var(--etax-body)/var(--etax-leading) var(--etax-font) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"], [data-testid="Dropdown"]) :is(h1, h2, h3, input, textarea, button, [role="menuitem"]) { font-family: var(--etax-font) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"]) :is(button, [role="button"], [role="menuitem"]) { border-radius: var(--etax-radius) !important; }
+.x-etax-enabled [role="menuitem"] { padding: 12px 20px !important; color: var(--etax-ink) !important; border-bottom: 1px solid var(--etax-line) !important; }
+.x-etax-enabled [role="menuitem"]:hover { background: var(--etax-soft) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"]) :focus-visible { outline: 2px solid var(--etax-green) !important; outline-offset: 2px; }
+.x-etax-enabled [role="progressbar"] { color: var(--etax-green) !important; accent-color: var(--etax-green); }
+.x-etax-enabled :is(#react-root, #layers) [aria-invalid="true"] { outline: 2px dashed currentColor !important; outline-offset: 3px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="sidebarColumn"] :is(section, aside, h2) { background: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root, #layers) form[role="search"] { background: var(--etax-field) !important; }
+.x-etax-enabled :is(#react-root, #layers) header nav a { background: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root, #layers) [role="tab"][aria-selected="true"] { background: var(--etax-soft) !important; font-weight: bold !important; }
+.x-etax-enabled :is(#react-root, #layers) [role="tab"][aria-selected="false"]:hover { text-decoration: underline; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] :is([data-testid="unlike"], [data-testid="unlike"] *, [data-testid="unretweet"], [data-testid="unretweet"] *) { color: var(--etax-green) !important; }
+
+/* Independent content preferences, scoped to post attachments only. */
+.x-etax-enabled[data-x-etax-media="compact"] :is(#react-root, #layers) [data-testid="tweet"] :is([data-testid="tweetPhoto"], [data-testid="videoPlayer"]) { max-height: 160px !important; overflow: hidden; }
+.x-etax-enabled[data-x-etax-media="hidden"] :is(#react-root, #layers) [data-testid="tweet"] :is([data-testid="tweetPhoto"], [data-testid="videoPlayer"]) { display: none !important; }
+.x-etax-enabled[data-x-etax-sidebar="hide"] :is(#react-root, #layers) [data-testid="sidebarColumn"] { display: none !important; }
+.x-etax-enabled[data-x-etax-sidebar="hide"] :is(#react-root, #layers) [data-testid="primaryColumn"] { max-width: 920px !important; width: min(920px, 100%) !important; flex: 1 1 auto !important; }
+.x-etax-enabled :is(#react-root, #layers) [role="dialog"] { background: var(--etax-surface) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled [role="menuitem"] { background: var(--etax-surface) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"]) :is(input, textarea, [contenteditable="true"]) { background: var(--etax-field) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"]) :is(.r-kemksi, .r-5zmot, .r-14lw9ot, .r-yfoy6g, [style*="background-color: rgb(0, 0, 0)"], [style*="background-color: rgb(21, 32, 43)"]) { background: var(--etax-surface) !important; }
+.x-etax-enabled :is([role="dialog"], [role="menu"]) :is(.r-18jsvk2, .r-jwli3a, .r-1nao33i) { color: var(--etax-ink) !important; }
+
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] [role="group"] :is(button, [role="button"]) { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+
+/* Wrapper contracts: theme the component once, let native children keep their geometry.
+   Includes React portal siblings such as menus and compose dialogs in #layers. */
+.x-etax-enabled :is(#react-root, #layers) { font-family: var(--etax-font); color: var(--etax-ink); }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="primaryColumn"], [data-testid="sidebarColumn"], [data-testid="composer"], [role="dialog"]) { min-width: 0; box-sizing: border-box; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid^="tweetTextarea_"], [data-testid="dmComposerTextInput"])[contenteditable="true"] { flex: 1 1 auto; min-width: 0; max-width: 100%; box-sizing: border-box; overflow-wrap: anywhere; line-height: var(--etax-leading); }
+/* An outer editor wrapper should grow with its text, with no second border. */
+.x-etax-enabled :is(#react-root, #layers) [data-testid^="tweetTextarea_"]:has([contenteditable="true"]) { min-width: 0; flex: 1 1 auto; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="toolBar"] { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; height: auto; padding: 8px; box-sizing: border-box; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="toolBar"] > :is(div,span) { min-width: 0; max-width: 100%; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="tweetButton"], [data-testid="tweetButtonInline"], [data-testid="dmComposerSendButton"]) { flex: 0 0 auto !important; white-space: nowrap !important; padding: 7px 16px !important; min-height: 34px !important; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="toolBar"] :is([data-testid="tweetButton"], [data-testid="tweetButtonInline"]) { margin-left: auto; }
+/* Inner X color utilities must inherit from their themed control, including portals. */
+.x-etax-enabled :is(#react-root, #layers) :is(button, [role="button"], [role="menuitem"], [role="tab"]) :is(div,span) { color: inherit !important; background-color: transparent !important; }
+.x-etax-enabled :is(#react-root, #layers) :is(button, [role="button"], [role="menuitem"], [role="tab"]) svg:not([data-testid="icon-verified"]) { color: inherit !important; }
+.x-etax-enabled :is(#react-root, #layers) [role="tablist"] { height: auto !important; min-height: 44px; box-sizing: border-box; }
+.x-etax-enabled :is(#react-root, #layers) [role="tab"] { min-width: 0; line-height: 1.5 !important; padding-inline: clamp(6px, 1.5vw, 20px) !important; overflow-wrap: anywhere; }
+.x-etax-enabled :is(#react-root, #layers) :is([role="dialog"], [role="menu"], [data-testid="Dropdown"]) :is(.r-14lw9ot, .r-kemksi, .r-5zmot, .r-yfoy6g) { background-color: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([role="dialog"], [role="menu"], [data-testid="Dropdown"]) :is(.r-18jsvk2, .r-jwli3a, .r-1nao33i) { color: var(--etax-ink) !important; }
+/* Sidebar cards can be divs, not just section/aside. Use their heading as the boundary. */
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] :is([data-testid="trend"],[data-testid="UserCell"]) { padding: 16px !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="card.wrapper"], [data-testid="quoteTweet"]) :is(.r-14lw9ot,.r-kemksi,.r-5zmot,.r-yfoy6g) { background: transparent !important; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="tweetPhoto"],[data-testid="videoPlayer"]) { max-width: 100%; }
+.x-etax-enabled :is(#react-root, #layers) :is([data-testid="tweet"],[data-testid="notification"],[data-testid="UserCell"]) { min-width: 0; overflow-wrap: anywhere; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] [role="group"] { flex-wrap: wrap; row-gap: 6px; }
+.x-etax-enabled :is(#react-root, #layers) [data-testid="tweet"] [role="group"] :is(button,[role="button"]) { flex-shrink: 0; min-height: 28px; }
+@media(max-width:420px) {
+  .x-etax-enabled #react-root [data-testid="tweet"] { padding-inline: 12px !important; }
+  .x-etax-enabled :is(#react-root, #layers) [data-testid="User-Name"] { overflow-wrap: anywhere; min-width: 0; }
+  .x-etax-enabled #x-etax-theme-banner .x-etax-view-controls { padding-inline: 12px; }
+  .x-etax-enabled #x-etax-theme-banner .x-etax-select { flex-direction: column; align-items: stretch; gap: 4px; min-width: 0; }
+  .x-etax-enabled #x-etax-theme-banner select { min-width: 0; width: 100%; max-width: 100%; }
+  .x-etax-enabled .x-etax-masthead { padding-inline: 10px; }
+  .x-etax-enabled .x-etax-brand strong { font-size: 19px; }
+  .x-etax-enabled .x-etax-theme-note > span { display: none; }
+  .x-etax-enabled .x-etax-task-card { padding: 16px; }
+}
+/* Dialog text utilities have greater specificity than ordinary control children. */
+.x-etax-enabled :is(#react-root, #layers) :is([role="dialog"], [role="menu"]) :is(button, [role="button"], [role="menuitem"]) :is(div,span) { color: inherit !important; background-color: transparent !important; }

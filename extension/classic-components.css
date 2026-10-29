@@ -1,0 +1,178 @@
+/* A complete desktop-software treatment for classic. Original X controls keep their handlers. */
+html.x-etax-enabled[data-x-etax-skin="classic"] { --etax-radius: 3px; --etax-control: linear-gradient(#ffffed,#edf3d3); }
+/* Clip every avatar layer, including X's inner circular masking divs. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-testid^="UserAvatar-Container"] :is(div,a,img) { border-radius: 2px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header h1 a { font-size: 0 !important; border: 0 !important; border-radius: 0 !important; display: block !important; padding: 8px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header h1 a svg { display: none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header h1 a::after { content: 'メインメニュー'; font: bold 14px/1.5 var(--etax-font); color: #396d27; }
+/* More/account are buttons, while other navigation entries are links. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="AppTabBar_More_Menu"] { background: #ffffbc !important; border: 1px solid #8bb888 !important; border-radius: 0 !important; margin-block: 9px !important; box-shadow: inset 0 0 0 1px #d0dda6 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="AppTabBar_More_Menu"] > div { padding: 10px 13px !important; border-radius: 0 !important; gap: 9px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="AppTabBar_More_Menu"] :is(div,span) { font-size: 13px !important; color: #396d27 !important; font-weight: bold !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="SideNav_AccountSwitcher_Button"] { padding: 10px !important; background: #ffeabd !important; border: 1px solid #8eae69 !important; border-radius: 2px !important; }
+/* Search's rounded shell is inside the form; resetting the form alone misses it. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) form[role="search"] { border: 2px inset #c5d2b6 !important; border-radius: 0 !important; background: #fffef4 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) form[role="search"] :is(div,label,input) { border-radius: 0 !important; background-color: transparent !important; }
+/* Reset the round hover layers too, not just their clickable parent. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([role="button"],[role="tab"],header nav a) :is(.r-sdzlij,[style*="border-radius: 9999px"]) { border-radius: 2px !important; }
+/* Body of a post is a ruled document; attachments use a straight frame. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] { border-bottom: 1px solid #8eae69 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] :is([data-testid="tweetPhoto"],[data-testid="card.wrapper"],[data-testid="videoPlayer"],[data-testid="videoComponent"]) { border-radius: 2px !important; border-color: #8eae69 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [data-testid="card.wrapper"] [role="link"] { border-radius: 0 !important; }
+/* Text-labelled actions are the same native controls; counters and ARIA stay intact. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption] { display: inline-flex !important; flex-direction: row !important; align-items: center !important; gap: 5px !important; padding: 5px 8px !important; min-height: 28px !important; white-space: nowrap !important; background: var(--etax-control) !important; border: 1px solid #8eae69 !important; border-radius: 2px !important; color: #396d27 !important; box-shadow: inset 1px 1px #fff !important; font: 12px/1.5 var(--etax-font) !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption]::before { content: attr(data-x-etax-caption); font: bold 12px/1.5 var(--etax-font); }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption] svg { display: none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [role="group"] { justify-content: flex-start !important; gap: 6px !important; flex-wrap: wrap !important; padding-top: 10px !important; border-top: 1px solid #abc58a !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [role="group"] > div { flex: 0 0 auto !important; width: auto !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [role="group"] [data-x-etax-caption] { background: var(--etax-control) !important; border: 1px solid #8eae69 !important; box-shadow: inset 1px 1px #fff !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([data-testid="unlike"],[data-testid="unretweet"],[data-testid="removeBookmark"])[data-x-etax-caption] { background: #d4e9b8 !important; border: 2px inset #8eae69 !important; }
+/* Undo the old toolbar's icon-only reset for labelled classic controls. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-component="composer-toolbar"] [data-x-etax-caption] { background: var(--etax-control) !important; border: 1px solid #8eae69 !important; box-shadow: inset 1px 1px #fff !important; margin-inline: 2px; }
+/* Cards, including the subscription card whose title is not an h2. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] { border-radius: 2px !important; box-shadow: inset 0 0 0 1px #fff !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-heading"] { margin: 0 !important; padding: 8px 12px !important; background: #a1ce30 !important; color: #243b0b !important; font: bold 16px/1.6 var(--etax-font) !important; border: 0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-card"] :is(a[role="link"],[role="button"]):not([data-testid="UserCell"]):not([data-testid^="news_sidebar_article_"]) { border-radius: 2px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-card"] a[role="link"]:not(:has([data-testid^="UserAvatar-Container"])) { color: #396d27 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-testid$="-follow"],[data-testid$="-unfollow"]) { background: var(--etax-button-bg) !important; border: 2px solid #a8cc74 !important; box-shadow: inset 0 0 0 1px #fff !important; color: #fff !important; border-radius: 3px !important; }
+/* Keep the overlay entry points useful, styled as utility buttons. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([data-testid="GrokDrawerHeader"],[data-testid="chat-drawer-main"],[data-testid="BottomBar"]) { border-radius: 2px !important; border-color: #8eae69 !important; box-shadow: none !important; }
+@media(max-width:700px) {
+ .x-etax-enabled[data-x-etax-skin="classic"] #react-root header h1 a::after { content:'メニュー'; font-size:11px; }
+}
+/* Compact, type-based menu emblems replace the native X line icon set. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav :is(a,[data-testid="AppTabBar_More_Menu"]) { --classic-symbol: '▤'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_Home_Link"] { --classic-symbol:'⌂'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_Explore_Link"] { --classic-symbol:'？'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_Notifications_Link"] { --classic-symbol:'!'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_DirectMessage_Link"] { --classic-symbol:'〒'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[href="/i/grok"] { --classic-symbol:'G'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[href="/i/premium"] { --classic-symbol:'P'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[href="/i/history"] { --classic-symbol:'歴'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[href="/i/jf/creators/studio"] { --classic-symbol:'作'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[href="/compose/articles"] { --classic-symbol:'文'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_Profile_Link"] { --classic-symbol:'人'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_More_Menu"] { --classic-symbol:'…'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav :is(a,[data-testid="AppTabBar_More_Menu"]) > div::before { content:var(--classic-symbol); display:grid; place-items:center; box-sizing:border-box; width:24px; height:24px; flex:0 0 24px; border:1px solid #85ac6b; box-shadow:inset 1px 1px #fff; background:linear-gradient(#ffffed,#cfe1b5); color:#396d27; font:bold 16px/1 serif; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav :is(a,[data-testid="AppTabBar_More_Menu"]) svg { display:none !important; }
+/* Native ScrollSnap has presentation wrappers, not direct tab children. */
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"][role="tablist"] > [role="presentation"]:has([role="tab"]) { flex:0 0 auto !important; min-width:0 !important; }
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"] [role="tab"] { box-sizing:border-box !important; height:44px !important; min-height:44px !important; max-width:min(320px,70vw) !important; overflow:hidden !important; }
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"] [role="tab"] > div { min-width:0 !important; max-width:100% !important; height:auto !important; }
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"] [role="tab"] span { overflow:hidden !important; text-overflow:ellipsis; white-space:nowrap !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tab"] [style*="background-color: rgb(29, 155, 240)"] { display:none !important; }
+/* Use a fixed chevron box so the native SVG cannot squeeze tab labels. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tab"] svg { width:12px !important; height:12px !important; flex:0 0 12px !important; margin-left:6px; }
+/* Labelled toolbar controls need their native 34px inner slots to grow. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="composer-toolbar"] [role="presentation"] { flex:0 0 auto !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="composer-toolbar"] [role="presentation"] div:has([data-x-etax-caption]) { width:auto !important; min-width:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([data-testid="GrokDrawerHeader"],[data-testid="chat-drawer-main"])[data-x-etax-caption] { justify-content:center !important; width:55px !important; height:55px !important; padding:4px !important; gap:0 !important; }
+/* Reserve the bottom-right stack for X's two utility launchers. */
+.x-etax-enabled .x-etax-top { bottom:168px !important; right:24px !important; box-sizing:border-box; text-align:center; white-space:nowrap; }
+.x-etax-enabled.x-etax-scrolled .x-etax-top { display:grid; place-items:center; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-top { width:55px; height:40px; border:1px solid #8eae69; border-radius:2px; background:linear-gradient(#fffde4,#cfeacd); color:#396d27; box-shadow:inset 1px 1px #fff; font:bold 20px/1 sans-serif; }
+@media(max-width:700px) { .x-etax-enabled .x-etax-top { right:16px !important; } }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-testid="toolBar"][data-x-etax-component="composer-toolbar"] [role="button"][data-x-etax-caption] { background:var(--etax-control) !important; border:1px solid #8eae69 !important; box-shadow:inset 1px 1px #fff !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-heading"] { box-sizing:border-box !important; align-self:stretch !important; width:100% !important; }
+/* Classic finishing: consistent spacing, quiet paper surfaces, tactile controls. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(.x-etax-task-card h2,.x-etax-section-title,.x-etax-brand strong) { text-shadow:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav :is(a,[data-testid="AppTabBar_More_Menu"]) { margin-block:4px !important; min-height:44px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav :is(a,[data-testid="AppTabBar_More_Menu"]) > div { padding:8px 12px !important; gap:10px !important; min-height:42px; box-sizing:border-box; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[aria-current="page"] { background:#ffedac !important; box-shadow:inset 3px 0 #679631,inset 0 0 0 1px #fff !important; outline:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="SideNav_AccountSwitcher_Button"] { margin-block:12px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweetText"] { line-height:1.8 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [data-testid="User-Name"] { border-color:#bdc896 !important; box-shadow:inset 0 1px #fff8dd; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [contenteditable="true"][data-testid^="tweetTextarea_"] { background:#fffef8 !important; box-shadow:inset 1px 2px 3px #2945190c !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="toolBar"] { border-block:1px solid #c6d494 !important; padding-block:8px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption]:hover:not([aria-disabled="true"]):not(:disabled) { filter:brightness(.97); }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption]:active:not([aria-disabled="true"]):not(:disabled) { box-shadow:inset 1px 1px 2px #72924d !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-heading"] { background:linear-gradient(#b9d96b,#a1ce30) !important; border-bottom:1px solid #8eae69 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-view-controls { background:#f6f8ed; border-block:1px solid #d9e3c5; padding-block:12px; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-select select { background:#fffef5; border:1px solid #9cb37d; border-radius:2px; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-mode-description { padding-top:8px; background:#f6f8ed; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="portal"] .x-etax-section-title { padding-block:24px; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="portal"] .x-etax-section-title h1 { font-size:30px; line-height:1.5; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-task-card { border:1px solid #adbf8d; border-radius:2px; background:#fffef5; padding:20px; box-shadow:inset 0 3px #d8e6b5; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-task-card h2 { font-size:18px; line-height:1.6; margin-block:8px; }
+.x-etax-enabled[data-x-etax-skin="classic"] .x-etax-task-card a { border-color:#d8e3c2; }
+@media(prefers-reduced-motion:no-preference) {
+ .x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a { transition:background-color .12s ease; }
+}
+/* Complete the remaining classic surfaces, including anonymous semantic cards. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] :is(section,aside) { border-radius:2px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) form[role="search"] input { border:0 !important; box-shadow:none !important; padding:10px 12px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) form[role="search"] svg { width:16px !important; height:16px !important; color:#396d27 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is([role="menu"],[data-x-etax-component="dialog-surface"]) { border:1px solid #799751 !important; border-radius:2px !important; background:#fffef4 !important; box-shadow:3px 3px 0 #70855233 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] [role="menuitem"] { min-height:38px; padding:10px 14px !important; border-bottom:1px solid #d9e3c7 !important; background:#fffef4 !important; font-size:13px !important; line-height:1.5 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] [role="menuitem"]:hover { background:#e6edcf !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] [role="menuitem"] svg { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] [role="menuitem"]::before { content:'›'; color:#679631; font:bold 18px/1 serif; margin-right:10px; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-x-etax-caption="管理"] { min-width:38px !important; padding:4px !important; font-size:12px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([data-x-etax-caption="◀"],[data-x-etax-caption="▶"]) { width:28px !important; min-width:28px !important; height:28px !important; min-height:28px !important; padding:0 !important; gap:0 !important; justify-content:center !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) :is([data-x-etax-caption="◀"],[data-x-etax-caption="▶"]) > div { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav [data-testid="AppTabBar_Bookmarks_Link"] { --classic-symbol:'栞'; }
+.x-etax-enabled[data-x-etax-skin="classic"] [role="menuitem"] { display:flex !important; flex-direction:row !important; align-items:center !important; }
+/* Sidebar is a stack of window panels and ruled lists, including late-loaded news. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] { position:relative; background:#fffef4 !important; border:1px solid #92ab6c !important; border-radius:2px !important; padding:0 !important; margin-bottom:16px !important; box-shadow:inset 0 0 0 1px #fff !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] :is(section,aside) { padding:0 !important; margin:0 !important; gap:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] [dir] { font-size:13px !important; line-height:1.65 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-heading"] { margin:0 !important; padding:9px 36px 9px 12px !important; min-height:38px; border:0 !important; border-bottom:1px solid #698e3d !important; border-radius:0 !important; background:linear-gradient(#84aa49,#679631) !important; color:#fff !important; font:bold 14px/1.5 var(--etax-font) !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-heading"] :is(div,span) { color:#fff !important; font-size:14px !important; line-height:1.5 !important; font-weight:700 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] :is([data-x-etax-component="side-row"],[data-x-etax-component="side-user"]) { border:0 !important; border-bottom:1px solid #d7e2c3 !important; border-radius:0 !important; background:#fffef4 !important; padding:12px !important; margin:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] :is([data-x-etax-component="side-row"],[data-x-etax-component="side-user"]):hover { background:#eef4df !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-testid="pill-contents-container"] { border-radius:2px !important; border-color:#adbf8d !important; background:#f2f6e7 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] > aside > div:not(:has([data-x-etax-component="side-heading"])):not(:has([data-testid="UserCell"])) { padding:12px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] a[href^="/i/premium"] { margin:0 12px 12px !important; padding:8px 12px !important; min-height:36px !important; border:1px solid #86a75a !important; border-radius:2px !important; background:var(--etax-button-bg) !important; box-shadow:inset 0 0 0 1px #f7ffe7 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] a[href^="/i/premium"] :is(div,span) { color:#fff !important; white-space:normal !important; font-size:12px !important; line-height:1.5 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-caption="×"] { position:absolute !important; top:7px !important; right:7px !important; width:24px !important; min-width:24px !important; height:24px !important; min-height:24px !important; padding:0 !important; justify-content:center !important; gap:0 !important; z-index:1; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-caption="×"] > div { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] :is([data-testid$="-follow"],[data-testid$="-unfollow"]) { min-height:30px !important; padding:4px 8px !important; font-size:12px !important; white-space:nowrap !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] :is(div,aside,section):is(:has(> [data-x-etax-component="side-heading"]),:has(> div > [data-x-etax-component="side-heading"])) { padding:0 !important; margin:0 !important; width:100% !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-testid="icon-verified"] { color:#679631 !important; }
+
+/* Profile dossier: keep every native action and field, remove the social-cover hierarchy. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-cover-empty"] { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-cover"] { max-height:130px; overflow:hidden; border-bottom:1px solid #a4bb83; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-sheet"] { margin:14px !important; padding:0 !important; border:1px solid #92ab6c; background:#fffef4 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-sheet"]::before { content:'利用者情報'; display:block; padding:8px 12px; background:linear-gradient(#84aa49,#679631); color:white; font:bold 14px/1.5 var(--etax-font); }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-top"] { display:flex !important; align-items:center !important; gap:12px; padding:12px !important; margin:0 !important; flex-wrap:wrap !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-avatar"] { width:76px !important; height:76px !important; min-width:76px !important; flex:0 0 76px !important; margin:0 !important; transform:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-actions"] { display:flex !important; flex-direction:row !important; flex-wrap:wrap !important; gap:6px; justify-content:flex-end !important; align-items:center !important; flex:1 1 200px !important; min-width:0 !important; padding:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-actions"] > :is(button,a,[role="button"]) { margin:0 !important; width:auto !important; height:auto !important; min-width:0 !important; min-height:30px !important; padding:5px 10px !important; font-size:12px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-sheet"] [data-testid="UserName"] { margin:0 !important; padding:10px 12px !important; border:0 !important; border-block:1px solid #b8ca9d !important; background:#ffeabd !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-sheet"] [data-testid="UserName"] [dir] { font-size:15px !important; line-height:1.6 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-description"] { margin:0 !important; padding:12px !important; border-bottom:1px solid #ccd9b8; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-description"]::before { content:'紹介'; display:block; color:#537535; font:bold 11px/1.5 var(--etax-font); margin-bottom:6px; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserDescription"] { padding:0 !important; font:13px/1.75 var(--etax-font) !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserProfileHeader_Items"] { display:flex !important; flex-direction:column !important; margin:0 !important; padding:0 !important; font:13px/1.7 var(--etax-font) !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserProfileHeader_Items"] > :is(span,a,div) { display:flex !important; flex-direction:row !important; align-items:baseline; gap:12px; margin:0 !important; padding:8px 12px !important; border-bottom:1px solid #ccd9b8; min-width:0; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserProfileHeader_Items"] :is([data-testid="UserLocation"],[data-testid="UserUrl"])::before { display:inline-block; flex:0 0 64px; font:bold 11px/1.7 var(--etax-font); color:#537535; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserLocation"]::before { content:'所在地'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserUrl"]::before { content:'関連サイト'; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserProfileHeader_Items"] svg { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-x-etax-component="profile-counts"],[data-x-etax-component="profile-connections"]) { margin:0 !important; padding:10px 12px !important; background:#edf4df; font:12px/1.7 var(--etax-font); gap:12px; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-x-etax-component="profile-counts"],[data-x-etax-component="profile-connections"]) [dir] { font-size:12px !important; }
+/* Inner spans carry X's inline blue, so the link and its text need the same rule. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-testid="UserDescription"],[data-testid="UserProfileHeader_Items"],[data-x-etax-component="side-card"]) a:not([role="button"]):not(:has(img)) { color:#365c28 !important; text-decoration:underline; text-underline-offset:2px; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-testid="UserDescription"],[data-testid="UserProfileHeader_Items"],[data-x-etax-component="side-card"]) a:not([role="button"]):not(:has(img)) :is(div,span) { color:inherit !important; }
+/* Keep the original verification shape and accessible status, using the theme ink. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-testid="icon-verified"] { color:#537535 !important; fill:currentColor !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root,#layers) [data-testid="icon-verified"] :is(path,g) { fill:currentColor !important; }
+/* Panels can contain a second rounded aside/div. Reset all panel shells and title text. */
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-card"] :is(div,aside,section,ul,li) { border-radius:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-card"] > aside { border:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="side-heading"] :is(span,div) { background:transparent !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="live-count-frame"] { animation:none !important; background:#edf4df !important; border:0 !important; box-shadow:none !important; outline:0 !important; padding:0 !important; border-radius:0 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="live-count-frame"]::before,
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="live-count-frame"]::after { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="pill-contents-container"] { border:1px solid #92ab6c !important; border-radius:0 !important; background:#edf4df !important; padding:3px 6px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="pill-contents-container"] [data-testid^="UserAvatar-Container"] { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="pill-contents-container"] [dir] { color:#396d27 !important; font:bold 12px/1.5 var(--etax-font) !important; }
+@media(max-width:500px) {
+ .x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-sheet"] { margin:8px !important; }
+ .x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-x-etax-component="profile-actions"] { justify-content:flex-start !important; flex-basis:100% !important; }
+}
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="pill-contents-container"] > div { border:0 !important; background:transparent !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="pill-contents-container"] div:has(> [data-testid^="UserAvatar-Container"]) { display:none !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-testid="icon-verified"] { color:#537535 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="UserProfileHeader_Items"] > div:has([data-testid="UserJoinDate"])::before { content:'利用開始'; flex:0 0 64px; color:#537535; font:bold 11px/1.7 var(--etax-font); }

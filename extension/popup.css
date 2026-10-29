@@ -1,0 +1,32 @@
+:root { font-family: var(--etax-font); color: var(--etax-ink); background: var(--etax-white); color-scheme: light; line-height: var(--etax-leading); }
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; font-size: var(--etax-small); }
+header { padding-top: 24px; }
+.wordmark { padding: 0 24px; font-size: 28px; font-weight: 700; color: var(--etax-green); }
+.wordmark span { font-size: 14px; margin-left: 12px; font-weight: 400; }
+header p { margin: 16px 0 0; padding: 18px 24px; color: var(--etax-white); background: var(--etax-green); }
+main { padding: 24px; }
+.setting { margin-bottom: 16px; padding: 20px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: var(--etax-hairline) solid var(--etax-line); border-radius: var(--etax-radius); cursor: pointer; }
+.setting strong { display: block; font-size: var(--etax-body); color: var(--etax-green); }
+.setting small { display: block; color: var(--etax-muted); margin-top: 6px; font-size: 12px; }
+input { accent-color: var(--etax-green); width: 18px; height: 18px; margin: 0; cursor: pointer; flex-shrink: 0; }
+input:disabled { opacity: .5; cursor: wait; }
+:focus-visible { outline: 2px solid var(--etax-green); outline-offset: 3px; }
+#status { color: var(--etax-muted); font-size: 12px; min-height: 42px; margin: 16px 0; }
+.open-x { display: flex; justify-content: center; gap: 12px; padding: 9px 30px 8px; color: var(--etax-white); background: var(--etax-green); border: 0; border-radius: var(--etax-radius); text-decoration: none; }
+.open-x:hover { text-decoration: underline; }
+footer { padding: 16px 24px; border-top: 1px solid var(--etax-line); color: var(--etax-muted); font-size: 11px; }
+body { width: 390px; }
+header p { font-size: 13px; }
+fieldset { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+legend { padding: 0; margin-bottom: 10px; font-size: 13px; font-weight: 700; color: #006600; }
+select { width: 100%; padding: 10px 12px; background: white; color: #333; border: 1px solid #bbb; border-radius: 4px; font: 14px/1.75 var(--etax-font); }
+.help { margin: 8px 0 0; color: #666; font-size: 12px; }
+details { padding: 12px 0; margin-bottom: 20px; border-block: 1px solid #ddd; }
+summary { cursor: pointer; font-size: 13px; }
+.presets { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 12px; }
+.presets button { border: 1px solid #ccc; border-radius: 4px; background: white; padding: 10px; font: 12px/1.5 var(--etax-font); color: #333; cursor: pointer; text-align: left; }
+.presets button:hover { background: #f0f6f0; border-color: #006600; }
+.select-setting { display: block; font-size: 12px; margin-bottom: 12px; }
+.select-setting select { margin-top: 5px; }
+.setting { padding: 14px; }

@@ -1,0 +1,118 @@
+/* Visual layer only. The original X DOM, event handlers and data stay intact. */
+html.x-etax-enabled {
+  --etax-header: 124px;
+  --etax-shell-space: 124px;
+  color-scheme: light !important;
+  background: var(--etax-white) !important;
+  scroll-padding-top: calc(var(--etax-header) + 12px);
+}
+html.x-etax-enabled.x-etax-scrolled { --etax-header: 64px; }
+html.x-etax-enabled body { background: var(--etax-white) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root { color: var(--etax-ink) !important; }
+.x-etax-enabled :is(#react-root, [role="dialog"]) :is(div, span, a, button, input, textarea) { font-family: var(--etax-font) !important; }
+/* X palette classes are supplemented by semantic selectors below. */
+.x-etax-enabled #react-root :is(.r-kemksi, .r-5zmot, .r-14lw9ot, .r-yfoy6g,
+  [style*="background-color: rgb(0, 0, 0)"], [style*="background-color: rgb(21, 32, 43)"],
+  [style*="background-color: rgb(255, 255, 255)"], [style*="background-color: rgb(22, 24, 28)"],
+  [style*="background-color: rgb(39, 51, 64)"]) { background-color: var(--etax-white) !important; }
+.x-etax-enabled #react-root :is(.r-18jsvk2, .r-jwli3a, .r-1nao33i,
+  [style*="color: rgb(231, 233, 234)"], [style*="color: rgb(247, 249, 249)"],
+  [style*="color: rgb(15, 20, 25)"]) { color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root :is([style*="color: rgb(113, 118, 123)"],
+  [style*="color: rgb(139, 152, 165)"], [style*="color: rgb(83, 100, 113)"]) { color: var(--etax-muted) !important; }
+
+/* Flowing hero + reserved space for a fixed, two-row masthead.
+   Only the fixed masthead shrinks, so scrolling does not shift page content. */
+.x-etax-enabled #x-etax-theme-banner { padding-top: var(--etax-shell-space); background: var(--etax-white); color: var(--etax-ink); font: var(--etax-body)/var(--etax-leading) var(--etax-font); }
+.x-etax-enabled #x-etax-theme-banner * { box-sizing: border-box; }
+.x-etax-enabled .x-etax-masthead { position: fixed; inset: 0 0 auto; z-index: 2; height: var(--etax-header); display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 80px 44px; align-items: center; padding-inline: var(--etax-page-x); background: var(--etax-white); border-bottom: 1px solid var(--etax-line); }
+.x-etax-enabled .x-etax-brand { display: flex; align-items: baseline; gap: 16px; min-width: 0; }
+.x-etax-enabled .x-etax-brand strong { font-size: 32px; font-weight: 700; color: var(--etax-green); white-space: nowrap; }
+.x-etax-enabled .x-etax-brand span { font-size: var(--etax-small); color: var(--etax-muted); }
+.x-etax-enabled .x-etax-theme-note { font-size: var(--etax-small); color: var(--etax-muted); white-space: nowrap; }
+.x-etax-enabled .x-etax-nav { grid-column: 1 / -1; display: flex; align-items: stretch; height: 44px; min-width: 0; overflow-x: auto; }
+.x-etax-enabled .x-etax-nav a { padding: 8px var(--etax-space-lg); border-left: 1px solid var(--etax-line); color: var(--etax-ink); font-size: var(--etax-body); text-decoration: none; white-space: nowrap; }
+.x-etax-enabled .x-etax-nav a:last-child { border-right: 1px solid var(--etax-line); }
+.x-etax-enabled .x-etax-nav a:hover { color: var(--etax-green); text-decoration: underline; }
+.x-etax-enabled.x-etax-scrolled .x-etax-masthead { grid-template-columns: auto minmax(0, 1fr); grid-template-rows: 64px; gap: 24px; }
+.x-etax-enabled.x-etax-scrolled .x-etax-brand strong { font-size: 24px; }
+.x-etax-enabled.x-etax-scrolled :is(.x-etax-brand span, .x-etax-theme-note) { display: none; }
+.x-etax-enabled.x-etax-scrolled .x-etax-nav { grid-column: auto; justify-content: flex-end; }
+.x-etax-enabled.x-etax-scrolled .x-etax-nav a { padding-inline: 16px; }
+.x-etax-enabled .x-etax-breadcrumb { display: flex; flex-wrap: wrap; gap: 39px; padding: 16px var(--etax-page-x); font-size: var(--etax-small); }
+.x-etax-enabled .x-etax-breadcrumb a { color: var(--etax-green); }
+.x-etax-enabled .x-etax-section-title { padding: var(--etax-space-xl) var(--etax-page-x); text-align: center; background: var(--etax-green); color: var(--etax-white); }
+.x-etax-enabled .x-etax-section-title h1 { margin: 0; font-size: var(--etax-display); line-height: var(--etax-leading); font-weight: 700; word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
+.x-etax-enabled .x-etax-section-title p { margin: 12px 0 0; font-size: var(--etax-body); }
+.x-etax-enabled .x-etax-top { position: fixed; bottom: 24px; right: 24px; z-index: 2; display: none; width: 64px; height: 64px; padding: 0; border: 0; border-radius: 50%; color: var(--etax-white); background: var(--etax-green); font: 32px/1 var(--etax-font); cursor: pointer; }
+.x-etax-enabled.x-etax-scrolled .x-etax-top { display: block; }
+.x-etax-enabled #x-etax-theme-banner :is(a, button):focus-visible { outline: 2px solid var(--etax-green); outline-offset: 4px; }
+.x-etax-enabled .x-etax-top:focus-visible { outline-offset: 4px; }
+
+/* X's functional navigation remains in its original layout. */
+.x-etax-enabled #react-root header[role="banner"] { background: var(--etax-white) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root header[role="banner"] > div { height: 100% !important; }
+.x-etax-enabled #react-root header[role="banner"] > div > div { top: var(--etax-header) !important; height: calc(100dvh - var(--etax-header)) !important; }
+.x-etax-enabled #react-root header h1 a[href="/home"] { color: var(--etax-green) !important; }
+.x-etax-enabled #react-root header nav a { border-radius: 0 !important; border-left: 1px solid var(--etax-line) !important; margin-block: 8px !important; background: var(--etax-white) !important; color: var(--etax-ink) !important; box-shadow: none !important; }
+.x-etax-enabled #react-root header nav a > div { padding: 8px var(--etax-space-lg) !important; border-radius: 0 !important; background: transparent !important; }
+.x-etax-enabled #react-root header nav a :is(span, div) { font-size: var(--etax-body) !important; font-weight: 400 !important; color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root header nav a svg { width: 24px !important; height: 24px !important; color: var(--etax-green) !important; }
+.x-etax-enabled #react-root header nav a[aria-current="page"] { border-left: 5px solid var(--etax-green) !important; }
+.x-etax-enabled #react-root header nav a:hover span { text-decoration: underline; }
+
+.x-etax-enabled #react-root :is([data-testid="SideNav_NewTweet_Button"], [data-testid="tweetButtonInline"], [data-testid="tweetButton"]) {
+  min-height: 42px !important; padding: 9px 30px 8px !important;
+  background: var(--etax-green) !important; border: 0 !important; border-radius: var(--etax-radius) !important;
+  box-shadow: none !important; text-shadow: none !important; color: var(--etax-white) !important;
+}
+.x-etax-enabled #react-root :is([data-testid="SideNav_NewTweet_Button"], [data-testid="tweetButtonInline"], [data-testid="tweetButton"]) :is(div, span, svg) { color: var(--etax-white) !important; font-size: var(--etax-small) !important; font-weight: 400 !important; }
+.x-etax-enabled #react-root :is([data-testid="SideNav_NewTweet_Button"], [data-testid="tweetButtonInline"], [data-testid="tweetButton"]):hover { text-decoration: underline; }
+.x-etax-enabled #react-root :is([data-testid="tweetButtonInline"], [data-testid="tweetButton"]):is([aria-disabled="true"], :disabled) { opacity: .45 !important; }
+
+.x-etax-enabled #react-root [data-testid="primaryColumn"] { background: var(--etax-white) !important; border-inline: var(--etax-hairline) solid var(--etax-line) !important; color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root [data-testid="primaryColumn"] > div > div[style*="position: sticky"] { top: var(--etax-header) !important; background: var(--etax-white) !important; backdrop-filter: none !important; }
+.x-etax-enabled #react-root [data-testid="tweet"] { background: var(--etax-white) !important; border-bottom: var(--etax-hairline) solid var(--etax-line) !important; color: var(--etax-ink) !important; padding: var(--etax-space-xl) !important; box-shadow: none !important; }
+.x-etax-enabled #react-root [data-testid="tweetText"] { color: var(--etax-ink) !important; font-size: var(--etax-body) !important; line-height: var(--etax-leading) !important; overflow-wrap: anywhere; }
+.x-etax-enabled #react-root [data-testid="tweetText"] a { color: var(--etax-green) !important; text-decoration: underline; text-underline-offset: 3px; }
+.x-etax-enabled #react-root [data-testid="tweet"] [data-testid="User-Name"] { background: transparent !important; color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root [data-testid="User-Name"] a { color: inherit !important; }
+.x-etax-enabled #react-root [data-testid="tweet"] time { color: var(--etax-muted) !important; font-size: var(--etax-small) !important; }
+.x-etax-enabled #react-root [data-testid="tweet"] [role="group"] { color: var(--etax-muted) !important; }
+/* Preserve reaction state using the same green accent and X's filled icons. */
+.x-etax-enabled #react-root [data-testid="tweet"] :is([data-testid="unlike"], [data-testid="unlike"] *, [data-testid="unretweet"], [data-testid="unretweet"] *) { color: var(--etax-green) !important; }
+.x-etax-enabled #react-root [data-testid="tweet"] [data-testid="tweetPhoto"] { border-radius: var(--etax-radius) !important; border: var(--etax-hairline) solid var(--etax-line) !important; }
+.x-etax-enabled #react-root [data-testid^="UserAvatar-Container"] { border-radius: 50% !important; overflow: hidden; }
+.x-etax-enabled #react-root [role="tablist"] { background: var(--etax-white) !important; border-bottom: 1.7px solid var(--etax-line-subtle) !important; }
+.x-etax-enabled #react-root [role="tab"] { padding: 12px 26px !important; background: transparent !important; color: var(--etax-ink) !important; font-size: var(--etax-body) !important; border-radius: 0 !important; }
+.x-etax-enabled #react-root [role="tab"][aria-selected="true"] { border-bottom: 4px solid var(--etax-green) !important; }
+.x-etax-enabled #react-root [role="tab"] :is(div, span) { color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root [role="tab"] [style*="background-color: rgb(29, 155, 240)"] { background: var(--etax-green) !important; }
+
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] { color: var(--etax-ink) !important; }
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] :is(section, aside) { margin-bottom: var(--etax-gutter) !important; background: var(--etax-white) !important; border: var(--etax-hairline) solid var(--etax-line) !important; border-radius: var(--etax-radius) !important; box-shadow: none !important; }
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] h2 { margin: 0 0 10px !important; background: var(--etax-white) !important; color: var(--etax-strong) !important; border-left: 5px solid var(--etax-green) !important; border-bottom: 1.7px solid var(--etax-line-subtle) !important; padding: 12px 0 12px 12px !important; font-size: var(--etax-heading) !important; line-height: var(--etax-leading) !important; font-weight: 400 !important; word-break: keep-all; overflow-wrap: anywhere; }
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] [data-testid="trend"] { padding: var(--etax-space-xl) !important; border-bottom: var(--etax-hairline) solid var(--etax-line) !important; }
+.x-etax-enabled #react-root [data-testid="SearchBox_Search_Input"] { color: var(--etax-ink) !important; font-size: var(--etax-small) !important; }
+.x-etax-enabled #react-root form[role="search"] { background: var(--etax-white) !important; border: 1px solid var(--etax-line) !important; border-radius: var(--etax-radius) !important; }
+.x-etax-enabled #react-root form[role="search"] > div { background: transparent !important; border-radius: var(--etax-radius) !important; }
+.x-etax-enabled #react-root [role="dialog"] { background-color: var(--etax-white) !important; color: var(--etax-ink) !important; border-radius: var(--etax-radius) !important; }
+.x-etax-enabled #react-root [contenteditable="true"] { color: var(--etax-ink) !important; caret-color: var(--etax-green); }
+.x-etax-enabled #react-root :is(a, button, input, [role="button"], [contenteditable="true"]):focus-visible { outline: 2px solid var(--etax-green) !important; outline-offset: 3px !important; }
+.x-etax-enabled.x-etax-compact #react-root [data-testid="tweet"] { padding: 12px 24px !important; }
+/* 878px reference values remain intact; smaller screens receive explicit adaptations. */
+@media (max-width: 1100px) { .x-etax-enabled .x-etax-brand span { display: none; } }
+@media (max-width: 760px) {
+  html.x-etax-enabled { --etax-page-x: 20px; --etax-header: 112px; --etax-shell-space: 112px; --etax-display: 32px; }
+  .x-etax-enabled .x-etax-masthead { grid-template-rows: 68px 44px; }
+  .x-etax-enabled .x-etax-brand strong { font-size: 26px; }
+  .x-etax-enabled .x-etax-theme-note { font-size: 11px; }
+  .x-etax-enabled .x-etax-nav a { padding-inline: 12px; font-size: 14px; }
+  .x-etax-enabled.x-etax-scrolled .x-etax-masthead { gap: 12px; }
+  .x-etax-enabled.x-etax-scrolled .x-etax-nav { overflow-x: auto; justify-content: flex-start; }
+  .x-etax-enabled.x-etax-scrolled .x-etax-nav a { padding-inline: 10px; }
+  .x-etax-enabled .x-etax-breadcrumb { gap: 16px; }
+  .x-etax-enabled #react-root header nav a > div { padding-inline: 10px !important; }
+  .x-etax-enabled #react-root [data-testid="tweet"] { padding: 20px 16px !important; }
+  .x-etax-enabled .x-etax-top { bottom: 80px; right: 16px; width: 48px; height: 48px; font-size: 24px; }
+}

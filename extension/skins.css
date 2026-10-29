@@ -1,0 +1,111 @@
+/* Each skin changes component treatments as well as its token palette. */
+html.x-etax-enabled[data-x-etax-skin="classic"] { --etax-green: #679631; --etax-ink: #333; --etax-line: #8eae69; --etax-soft: #ebf4de; --etax-page: #ebf4de; --etax-button-bg: linear-gradient(#bbdf8d, #95c85a 46%, #7db240 51%, #96c963); --etax-radius: 7px; --etax-shadow: inset 0 0 0 1px #fff; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a { background: #ffffbc !important; border: 1px solid #8eae69 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] :is(.x-etax-task-card h2, .x-etax-section-title) { text-shadow: 0 1px 0 #42681d; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="User-Name"] { background: #ffeabd !important; padding: 5px !important; }
+html.x-etax-enabled[data-x-etax-skin="forms"] { --etax-green: #000080; --etax-ink: #181818; --etax-surface: #fffbed; --etax-page: #ece9d8; --etax-soft: #f2efd8; --etax-field: #fffef6; --etax-line: #92907f; --etax-radius: 0px; --etax-hairline: 1px; --etax-font: "MS PGothic", "Meiryo", serif; --etax-leading: 1.65; }
+.x-etax-enabled[data-x-etax-skin="forms"] .x-etax-section-title { margin: 16px var(--etax-page-x); padding: 12px 24px; }
+.x-etax-enabled[data-x-etax-skin="forms"] #react-root [data-testid="sidebarColumn"] h2 { background: #a1ce30 !important; color: #111 !important; font-size: 16px !important; border: 0 !important; }
+html.x-etax-enabled[data-x-etax-skin="mono"] { --etax-green: #202020; --etax-ink: #111; --etax-muted: #555; --etax-line: #888; --etax-soft: #f1f1f1; --etax-radius: 0px; --etax-hairline: 1px; --etax-font: "Courier New", "Meiryo", monospace; }
+.x-etax-enabled[data-x-etax-skin="mono"] .x-etax-section-title { background: #fff; color: #111; border-block: 3px double #111; }
+html.x-etax-enabled[data-x-etax-skin="contrast"] { --etax-green: #004400; --etax-ink: #000; --etax-muted: #333; --etax-line: #444; --etax-line-subtle: #444; --etax-soft: #e8f0e8; --etax-body: 18px; --etax-small: 16px; --etax-hairline: 2px; --etax-frame: 2px solid #444; }
+.x-etax-enabled[data-x-etax-skin="contrast"] :focus-visible { outline: 4px solid #000 !important; outline-offset: 4px !important; }
+
+/* American web nostalgia. These are unofficial homages, not affiliated products. */
+html.x-etax-enabled[data-x-etax-skin="win95"] { --etax-green: #000080; --etax-ink: #000; --etax-muted: #333; --etax-strong: #000; --etax-surface: #c0c0c0; --etax-page: #008080; --etax-soft: #d4d0c8; --etax-field: #fff; --etax-line: #808080; --etax-line-subtle: #808080; --etax-radius: 0px; --etax-font: Tahoma, "MS PGothic", sans-serif; --etax-leading: 1.5; --etax-body: 14px; --etax-small: 12px; --etax-frame: 2px outset #eee; --etax-shadow: inset 1px 1px #fff, inset -1px -1px #404040; --etax-button-bg: #c0c0c0; --etax-button-ink: #000; }
+.x-etax-enabled[data-x-etax-skin="win95"] .x-etax-masthead { border: 3px outset #ddd; }
+.x-etax-enabled[data-x-etax-skin="win95"] .x-etax-section-title { border: 3px outset #ddd; text-align: left; padding-block: 10px; }
+.x-etax-enabled[data-x-etax-skin="win95"] .x-etax-section-title h1 { font-size: 24px; }
+.x-etax-enabled[data-x-etax-skin="win95"] :is(.x-etax-task-card, #react-root [data-testid="primaryColumn"]) { border: 3px outset #ddd !important; }
+.x-etax-enabled[data-x-etax-skin="win95"] .x-etax-nav a { border: 2px outset #ddd; padding-block: 6px; }
+.x-etax-enabled[data-x-etax-skin="win95"] #react-root [data-testid="sidebarColumn"] h2 { background: #000080 !important; color: #fff !important; font: bold 14px Tahoma, sans-serif !important; border: 0 !important; }
+.x-etax-enabled[data-x-etax-skin="win95"] #react-root :is(button,[role="button"]):active { border-style: inset !important; }
+
+html.x-etax-enabled[data-x-etax-skin="yahoo"] { --etax-green: #600099; --etax-link: #0000cc; --etax-ink: #111; --etax-muted: #555; --etax-line: #bbb; --etax-soft: #eeeaf3; --etax-page: #fff; --etax-radius: 0px; --etax-font: Arial, "Meiryo", sans-serif; --etax-body: 14px; --etax-leading: 1.6; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] .x-etax-brand strong { font-family: Georgia, serif; font-size: 40px; font-style: italic; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] .x-etax-section-title { background: #eeeaf3; color: #600099; border-block: 1px solid #bbb; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] .x-etax-section-title h1 { font: bold 36px Georgia, serif; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] .x-etax-task-card { border: 0; border-top: 5px solid #600099; padding: 16px; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] :is(.x-etax-task-card a, .x-etax-nav a) { color: #0000cc; text-decoration: underline; }
+.x-etax-enabled[data-x-etax-skin="yahoo"] .x-etax-task-card h2 { font: bold 22px Georgia, serif; }
+
+html.x-etax-enabled[data-x-etax-skin="aol"] { --etax-green: #064eaf; --etax-link: #0033aa; --etax-ink: #102443; --etax-muted: #48566c; --etax-line: #7793bc; --etax-soft: #e7effb; --etax-page: #d9e6f8; --etax-button-bg: #ffd846; --etax-button-ink: #102443; --etax-frame: 1px solid #7793bc; --etax-font: Arial, "Meiryo", sans-serif; }
+.x-etax-enabled[data-x-etax-skin="aol"] .x-etax-section-title { background: linear-gradient(100deg,#003c8a,#0c68d1); border-bottom: 8px solid #ffd846; }
+.x-etax-enabled[data-x-etax-skin="aol"] .x-etax-nav { background: #ffd846; }
+.x-etax-enabled[data-x-etax-skin="aol"] .x-etax-nav a { color: #102443; font-weight: bold; }
+.x-etax-enabled[data-x-etax-skin="aol"] .x-etax-task-card h2::before { content: '✉ '; }
+.x-etax-enabled[data-x-etax-skin="aol"] #react-root [data-testid="sidebarColumn"] h2 { background: #064eaf !important; color: #fff !important; font-size: 18px !important; }
+
+html.x-etax-enabled[data-x-etax-skin="craigslist"] { --etax-green: #551a8b; --etax-link: #0000ee; --etax-ink: #111; --etax-strong: #111; --etax-muted: #555; --etax-line: #ccc; --etax-soft: #eee; --etax-radius: 0px; --etax-font: "Times New Roman", "Yu Mincho", serif; --etax-body: 16px; --etax-leading: 1.45; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-section-title { background: #eee; color: #111; padding-block: 8px; border-block: 1px solid #ccc; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-section-title h1 { font-size: 28px; font-weight: 400; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-brand strong { font: 34px "Times New Roman", serif; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-task-card { border: 0; padding: 0 16px; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-task-card h2 { color: #000; text-align: center; background: #eee; border-block: 1px solid #ccc; padding: 4px; font-size: 20px; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] :is(.x-etax-task-card a,.x-etax-nav a) { color: #0000ee; text-decoration: underline; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] .x-etax-task-card :is(small,p) { display: none; }
+.x-etax-enabled[data-x-etax-skin="craigslist"] #react-root [data-testid="tweet"] { padding-block: 12px !important; }
+
+html.x-etax-enabled[data-x-etax-skin="geocities"] { --etax-green: #ffed00; --etax-link: #7dffff; --etax-ink: #fff; --etax-strong: #ffed00; --etax-muted: #c6c1e8; --etax-surface: #100b2f; --etax-page: #08041d; --etax-soft: #26134d; --etax-field: #1c123c; --etax-line: #a171df; --etax-line-subtle: #71479e; --etax-radius: 0px; --etax-font: "Comic Sans MS", "Meiryo", cursive; --etax-button-bg: #ffed00; --etax-button-ink: #100b2f; --etax-frame: 2px ridge #bb87ff; }
+.x-etax-enabled[data-x-etax-skin="geocities"] body { background-image: radial-gradient(#fff 1px,transparent 1px), radial-gradient(#be98ff 1px,transparent 1px) !important; background-size: 47px 53px, 79px 83px !important; background-position: 0 0, 19px 27px !important; }
+.x-etax-enabled[data-x-etax-skin="geocities"] .x-etax-section-title { background: #26134d; color: #ffed00; border-block: 4px ridge #bb87ff; }
+.x-etax-enabled[data-x-etax-skin="geocities"] .x-etax-section-title p::after { content: ' ★ BEST VIEWED AT 800 × 600 ★'; display: block; color: #7dffff; font: 12px monospace; margin-top: 12px; }
+.x-etax-enabled[data-x-etax-skin="geocities"] .x-etax-task-card h2::before { content: '★ '; }
+.x-etax-enabled[data-x-etax-skin="geocities"] .x-etax-nav a { color: #7dffff; text-decoration: underline; }
+.x-etax-enabled[data-x-etax-skin="geocities"] #react-root [data-testid="User-Name"] { color: #fff !important; }
+.x-etax-enabled[data-x-etax-skin="geocities"] :is(.x-etax-top, #react-root [role="tab"]):focus-visible { outline-color: #7dffff !important; }
+.x-etax-enabled[data-x-etax-skin="geocities"] .x-etax-top { color: #100b2f; }
+/* Preserved v1 screenshot: classic + standard is an intentionally separate layout.
+   Do not replace this treatment when updating the official-site theme. */
+html.x-etax-enabled[data-x-etax-skin="classic"] { --etax-font: "MS PGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; --etax-ink: #333; --etax-strong: #243b0b; --etax-muted: #5d6653; --etax-link: #234797; --etax-page: #fff; --etax-leading: 1.7; --etax-body: 14px; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header[role="banner"] { background: #ebf4de !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a { margin-block: 9px !important; border: 1px solid #8bb888 !important; box-shadow: inset 0 0 0 1px #d0dda6 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a > div { width: 100%; padding: 10px 13px !important; gap: 9px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a :is(span,div) { font-size: 13px !important; font-weight: bold !important; color: #396d27 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a svg { width: 24px !important; height: 24px !important; box-sizing: border-box; padding: 3px; border: 2px solid #9dc998; border-radius: 50%; background: linear-gradient(#fffde4,#cfeacd); color: #6f9e43 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] { background: #ebf4de !important; padding-block: 16px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [data-testid="User-Name"] { padding: 6px 8px !important; border: 1px solid #8eae69 !important; background: #ffeabd !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid^="UserAvatar-Container"] { border-radius: 3px !important; outline: 1px solid #8eae69; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tablist"] { gap: 10px !important; padding: 8px 10px !important; background: #ffffbc !important; border-bottom: 1px solid #8eae69 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tab"] { min-height: 35px !important; padding: 8px 16px !important; background: #fffbc0 !important; border: 2px solid #78a741 !important; color: #396d27 !important; font-size: 13px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tab"][aria-selected="true"] { background: #ffe6a5 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] :is(section,aside) { background: #fffbea !important; border: 1px solid #8eae69 !important; border-radius: 14px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] h2 { background: #a1ce30 !important; color: #243b0b !important; border: 0 !important; padding: 8px 12px !important; font-size: 18px !important; font-weight: bold !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="toolBar"] { background: #ffffbc !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root :is([data-testid="tweetButton"],[data-testid="tweetButtonInline"],[data-testid="SideNav_NewTweet_Button"]) { border: 2px solid #a8cc74 !important; box-shadow: inset 0 0 0 1px #fff !important; text-shadow: 0 1px 2px #476c2a !important; }
+
+html.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] { --etax-header: 100px; --etax-shell-space: 100px; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-masthead { height: 50px; grid-template-columns: minmax(0,1fr) auto; grid-template-rows: 50px; padding-inline: 16px; gap: 16px; background: linear-gradient(100deg,#fff 28%,#eef7e5 65%,#a6cf77) !important; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-brand strong { font-family: Arial,"Meiryo",sans-serif; font-size: 28px; font-weight: 900; letter-spacing: -1px; text-shadow: 1px 1px #d8e8b8; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-brand span { font-size: 12px; font-weight: bold; color: #333; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] :is(.x-etax-nav,.x-etax-breadcrumb) { display: none; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-theme-note { display: flex; gap: 8px; align-items: center; font-size: 11px; color: #396d27; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-settings-button { padding: 5px 8px; background: #f5fbe9; color: #396d27; border: 1px solid #8eae69; font: inherit; cursor: pointer; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title { position: fixed; top: 50px; left: 0; right: 0; z-index: 2; height: 50px; padding: 0 16px; display: flex; gap: 24px; justify-content: center; align-items: center; background: #679631; text-align: left; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title h1 { font-size: 21px; letter-spacing: 2px; white-space: nowrap; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title p { display: block; margin: 0; font-size: 15px; font-weight: bold; white-space: nowrap; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] #x-etax-theme-banner:not(.x-etax-show-controls) :is(.x-etax-view-controls,.x-etax-mode-description) { display: none; }
+@media(max-width:760px) {
+  html.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] { --etax-header: 80px; --etax-shell-space: 80px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-masthead { height: 40px; grid-template-rows: 40px; padding-inline: 8px; gap: 8px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-brand strong { font-size: 19px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-theme-note { font-size: 9px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title { top: 40px; height: 40px; gap: 12px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title h1 { font-size: 16px; letter-spacing: 0; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title p { font-size: 12px; }
+}
+
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a:hover { background: #ffef9f !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root header nav a[aria-current="page"] { border-left-width: 1px !important; outline: 1px solid #548d29; background: #fff0a6 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"]:hover { background: #e2efd2 !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] [role="group"] { border-top: 1px dotted #8eae69; padding-top: 7px; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [role="tab"] { border-radius: 0 !important; }
+.x-etax-enabled.x-etax-compact[data-x-etax-skin="classic"] #react-root [data-testid="tweet"] { padding-block: 8px !important; }
+.x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="ledger"] #react-root [data-x-etax-record="ready"] { padding: 0 !important; }
+/* Match component shells in both the document and React's portal layer. */
+.x-etax-enabled[data-x-etax-skin="classic"] :is(#react-root, #layers) [data-testid="toolBar"] { background: #ffffbc !important; }
+@media(max-width:420px) {
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-brand strong { font-size: 18px; letter-spacing: -.5px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title { gap: 0; padding-inline: 8px; }
+  .x-etax-enabled[data-x-etax-skin="classic"][data-x-etax-layout="standard"] .x-etax-section-title p { display: none; }
+}

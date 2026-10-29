@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja" class="x-etax-settings">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>X Display Studio — 表示設定</title><link rel="stylesheet" href="extension/tokens.css"><link rel="stylesheet" href="extension/popup.css"><script src="extension/config.js?v=2112" defer></script><script src="preview-storage.js" defer></script><script src="extension/popup.js?v=2112" defer></script></head>
+<body>
+<header><div class="wordmark">X Display Studio</div><p>情報の配置 × 外観 · 50パターン</p></header>
+<main>
+<label class="setting"><span><strong>テーマを適用</strong><small>オフでX本来の画面に戻ります</small></span><input id="enabled" type="checkbox" role="switch" disabled></label>
+<fieldset><legend>01 情報の配置</legend><select id="layout" aria-label="情報の配置" disabled></select><p id="layout-help" class="help"></p></fieldset>
+<fieldset><legend>02 外観パターン</legend><select id="skin" aria-label="外観パターン" disabled></select><p id="skin-help" class="help"></p></fieldset>
+<fieldset><legend>03 文言パターン</legend><select id="writing" aria-label="文言パターン" disabled></select><p id="writing-help" class="help"></p></fieldset>
+<details><summary>おすすめの組み合わせ</summary><div id="presets" class="presets"></div></details>
+<fieldset><legend>04 表示の調整</legend>
+<label class="setting"><span><strong>コンパクト</strong><small>文字を小さくせず、余白を減らす</small></span><input id="compact" type="checkbox" disabled></label>
+<label class="select-setting">右サイド欄<select id="sidebar" disabled><option value="auto">配置モードに合わせる</option><option value="show">表示する</option><option value="hide">隠す</option></select></label>
+<label class="select-setting">投稿の画像・動画<select id="media" disabled><option value="full">通常サイズ</option><option value="compact">小さく表示</option><option value="hidden">非表示</option></select></label>
+</fieldset>
+<p id="status" role="status">設定を読み込み中…</p>
+<a class="open-x" href="https://x.com/home" target="_blank" rel="noopener noreferrer">Xを開く ↗</a>
+</main><footer>非公式の外観テーマ。X・各モチーフのサービスとは関係ありません。投稿内容は保存・送信しません。</footer>
+</body></html>

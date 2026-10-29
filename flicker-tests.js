@@ -1,0 +1,30 @@
+'use strict';
+const frame=document.getElementById('fixture'),run=document.getElementById('run'),out=document.getElementById('result');
+const tick=()=>new Promise(r=>setTimeout(r,100));
+frame.addEventListener('load',()=>{run.disabled=false;out.textContent='準備完了';});
+run.addEventListener('click',async()=>{
+ run.disabled=true;const w=frame.contentWindow,d=frame.contentDocument,rows=[];
+ const check=(name,value)=>rows.push((value?'PASS ':'FAIL ')+name);
+ const probe=d.createElement('div');probe.id='render-probe';d.getElementById('react-root').append(probe);await tick();
+ const more=d.querySelector('article [data-testid="caret"]'),toggle=d.querySelector('.x-etax-record-toggle');
+ const nav=d.querySelector('[data-testid="AppTabBar_Notifications_Link"]');
+ const changes=[];const observer=new w.MutationObserver(records=>changes.push(...records));
+ const watch=()=>{changes.length=0;observer.observe(more,{attributes:true,attributeOldValue:true,childList:true,subtree:true,characterData:true});observer.observe(nav,{attributes:true,childList:true,subtree:true,characterData:true});};
+ watch();
+ for(let i=0;i<5;i++){probe.textContent='時計 '+i;await tick();}
+ observer.disconnect();
+ const details=changes.map(m=>(m.target.getAttribute?.('data-testid')||m.target.parentElement?.tagName)+' '+m.type+' '+m.attributeName+' '+m.oldValue);
+ if(changes.length)rows.push(details.join(' / '));
+ check('無関係な5回のDOM更新でボタンとナビの書換えゼロ（'+changes.length+'件）',changes.length===0);
+ check('内容確認のノードを維持',toggle===d.querySelector('.x-etax-record-toggle'));
+ const label=more.getAttribute('data-x-etax-caption');
+ watch();await tick();await tick();observer.disconnect();
+ check('待機中に継続更新しない（'+changes.length+'件）',changes.length===0);
+ await w.chrome.storage.local.set({writing:'service'});await tick();check('文言設定の変更は反映',more.getAttribute('data-x-etax-caption')==='操作を選ぶ');
+ await w.chrome.storage.local.set({writing:'terminal'});await tick();check('文言設定を元に戻せる',more.getAttribute('data-x-etax-caption')===label);
+ const original=nav.querySelector('span');original.textContent='新しい表示';await tick();check('X側の新しい名称を上書きしない',nav.textContent.includes('新しい表示'));
+ const like=d.querySelector('[data-testid="like"]');like.setAttribute('data-testid','unlike');await tick();check('状態更新だけは反映',like.getAttribute('data-x-etax-caption')==='いいね済');
+ like.setAttribute('data-testid','like');await tick();
+ await w.chrome.storage.local.set({enabled:false});await tick();check('無効化でラベルを復元',!more.hasAttribute('data-x-etax-caption')&&nav.textContent.includes('新しい表示'));
+ probe.remove();out.textContent=rows.join('\n');out.dataset.complete='true';run.disabled=false;
+});

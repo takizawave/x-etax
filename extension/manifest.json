@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "X Display Studio",
+  "version": "2.11.1",
+  "description": "Xの見た目と情報配置を切替。窓口風とアメリカの懐かしいWeb風、5配置×10外観。",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "X Display Studio",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://www.x.com/*",
+        "https://www.twitter.com/*"
+      ],
+      "css": [
+        "tokens.css",
+        "theme.css",
+        "components.css",
+        "layouts.css",
+        "skins.css",
+        "native-components.css",
+        "classic-components.css",
+        "shell-layout.css"
+      ],
+      "js": [
+        "config.js",
+        "dom-contracts.js",
+        "wording.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

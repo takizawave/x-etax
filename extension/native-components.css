@@ -1,0 +1,26 @@
+/* Applied after skins: preserve X's ownership of geometry and virtualized cells. */
+.x-etax-enabled #react-root [data-x-etax-component="timeline-tabs"],
+.x-etax-enabled #react-root [data-x-etax-component="search-fixed"] { top: var(--etax-header) !important; background: var(--etax-surface) !important; }
+.x-etax-enabled :is(#react-root,#layers) [data-x-etax-component="composer-sticky"] { position: relative !important; top: auto !important; background: transparent !important; }
+/* ScrollSnap's children are content-sized horizontal tabs, not equal-width buttons. */
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"][role="tablist"] { flex-wrap: nowrap !important; overflow-x: auto !important; padding: 0 !important; gap: 0 !important; }
+.x-etax-enabled #react-root [data-testid="ScrollSnap-List"] [role="tab"] { flex: 0 0 auto !important; width: auto !important; white-space: nowrap !important; min-height: 44px; margin: 6px; }
+/* DraftEditor inherits height through every inner layer. Border/padding there compounds. */
+.x-etax-enabled :is(#react-root,#layers) .DraftEditor-root,
+.x-etax-enabled :is(#react-root,#layers) .DraftEditor-editorContainer { min-height: 0 !important; height: auto !important; border: 0 !important; }
+.x-etax-enabled :is(#react-root,#layers) .public-DraftEditorPlaceholder-root { top: 12px; left: 12px; color: var(--etax-muted) !important; pointer-events: none; }
+.x-etax-enabled :is(#react-root,#layers) [data-x-etax-component="composer-toolbar"] > nav { display: flex !important; flex: 1 1 200px !important; min-width: 0 !important; flex-direction: row !important; }
+.x-etax-enabled :is(#react-root,#layers) [data-x-etax-component="composer-toolbar"] > nav [data-testid="ScrollSnap-List"] { display: flex !important; flex-direction: row !important; }
+.x-etax-enabled :is(#react-root,#layers) [data-x-etax-component="composer-toolbar"] :is([role="button"],button):not([data-testid="tweetButton"]):not([data-testid="tweetButtonInline"]) { background: transparent !important; border: 0 !important; box-shadow: none !important; color: var(--etax-green) !important; }
+/* Scope the card once. Heading wrappers stay transparent and unframed. */
+.x-etax-enabled #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] { background: var(--etax-surface) !important; border: var(--etax-frame) !important; border-radius: var(--etax-radius) !important; overflow: hidden; margin-bottom: 16px !important; }
+.x-etax-enabled #react-root [data-x-etax-component="side-card"] :is(div:has(> h2),div:has(> div > h2),section,aside) { border: 0 !important; border-radius: 0 !important; background: transparent !important; margin-bottom: 0 !important; }
+.x-etax-enabled #react-root [data-x-etax-component="side-card"] :is(.r-14lw9ot,.r-kemksi,.r-5zmot,.r-yfoy6g) { background: transparent !important; }
+.x-etax-enabled[data-x-etax-skin="classic"] #react-root [data-testid="sidebarColumn"] [data-x-etax-component="side-card"] { background: #fffbea !important; border: 1px solid #8eae69 !important; }
+/* X has a full-screen dialog host AND a nested dialog surface. Never paint both. */
+.x-etax-enabled :is(#react-root,#layers) [role="dialog"][data-x-etax-component="dialog-host"] { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+.x-etax-enabled :is(#react-root,#layers) [role="dialog"][data-x-etax-component="dialog-surface"] { background: var(--etax-surface) !important; border: var(--etax-frame) !important; border-radius: var(--etax-radius) !important; }
+/* The dropdown's positioning wrapper is separate from its actual menu. */
+.x-etax-enabled [data-testid="Dropdown"]:has([role="menu"]) { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+/* Outline-style state symbols remain distinguishable; media is never recolored. */
+.x-etax-enabled :is(#react-root,#layers) :is([data-testid="chat-drawer-main"],[data-testid="GrokDrawer"]) { color: var(--etax-ink) !important; background: var(--etax-surface) !important; border-color: var(--etax-line) !important; }

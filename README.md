@@ -4,15 +4,13 @@
 
 パソコン版の **Google Chrome** で使えます。無料・GitHubアカウント不要。プログラミングやコマンド入力も不要です。
 
-[![Chrome用ZIPをダウンロード](docs/download.svg)](https://github.com/takizawave/x-etax/releases/latest/download/x-etax.zip)
-
-ボタンが表示されない場合は **[こちらからダウンロード](https://github.com/takizawave/x-etax/releases/latest/download/x-etax.zip)**。
+[ZIPをダウンロード](https://github.com/takizawave/x-etax/releases/latest/download/x-etax.zip)
 
 ## まず試す：5つの手順
 
 ### 1. ダウンロードしたZIPを解凍する
 
-上の緑のボタンを押して `x-etax.zip` を保存します。
+上の「ZIPをダウンロード」を押して `x-etax.zip` を保存します。
 
 - **Windows**：ダウンロードしたファイルを右クリック →「すべて展開」→「展開」。
 - **Mac**：ダウンロードしたファイルをダブルクリック。
@@ -78,7 +76,7 @@ Chrome右上の **パズル形のアイコン（拡張機能）→「X Display S
 <details>
 <summary>ソースコード一式をダウンロードした場合／導入手順の出典</summary>
 
-GitHubの「Code → Download ZIP」を使った場合は、解凍した `x-etax-main` の中にある **`extension` フォルダ**を手順4で選びます。上の緑のボタンは、拡張機能だけが入った簡単導入用ZIPです。
+GitHubの「Code → Download ZIP」を使った場合は、解凍した `x-etax-main` の中にある **`extension` フォルダ**を手順4で選びます。上の「ZIPをダウンロード」からは、拡張機能だけが入った簡単導入用ZIPを取得できます。
 
 読み込み方法は [Chrome公式の拡張機能導入手順](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) に沿っています。
 

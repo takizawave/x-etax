@@ -9,7 +9,7 @@ EXTENSION = {'manifest.json', 'config.js', 'content.js', 'dom-contracts.js', 'wo
 ROOT_FILES = {'.gitignore', 'README.md', 'PUBLIC-CONTENT.md', 'package.json', 'package-lock.json', 'preview.html', 'preview.js', 'preview-storage.js', 'components.html', 'gallery.html', 'gallery.css', 'gallery.js', 'lab.css', 'lab.js', 'popup-preview.html', 'browser-tests.html', 'browser-tests.js', 'flicker-tests.html', 'flicker-tests.js'}
 SCRIPTS = {'check-public.py', 'server.cjs', 'browser-check.cjs', 'screenshots.cjs'}
 IMAGES = {'office-classic.png', 'display-settings.png', 'retro-win95.png'}
-allowed = ROOT_FILES | {'extension/'+n for n in EXTENSION} | {'scripts/'+n for n in SCRIPTS} | {'docs/screenshots/'+n for n in IMAGES} | {'tests/config.test.cjs','tests/extension.test.cjs'}
+allowed = {'docs/download.svg'} | ROOT_FILES | {'extension/'+n for n in EXTENSION} | {'scripts/'+n for n in SCRIPTS} | {'docs/screenshots/'+n for n in IMAGES} | {'tests/config.test.cjs','tests/extension.test.cjs'}
 if (ROOT / '.git').exists():
     paths = subprocess.check_output(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], cwd=ROOT).decode().split('\0')
     paths = {p for p in paths if p}
